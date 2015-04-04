@@ -81,7 +81,7 @@
       <hr>
         
       <?php
-        $dir = "assets/data"; // folder, e.g.: 'images/', same dir as script use a '.'
+        $dir = "assets/data/"; // folder, e.g.: 'images/', same dir as script use a '.'
         $myDirectory = opendir($dir);
         while($entryName = readdir($myDirectory)) { $dirArray[] = $entryName; } // get files
         closedir($myDirectory); // close directory

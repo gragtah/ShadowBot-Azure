@@ -1,4 +1,4 @@
-rm *.txt
+rm -Rf *.txt
 cp /Users/avarsh/Documents/Programs/Humanoid/motionHandler/*.txt /Users/avarsh/Documents/Programs/Shadowbot\ Azure/assets/data/
 
 git add .

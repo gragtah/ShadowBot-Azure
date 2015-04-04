@@ -1,3 +1,5 @@
+cp /Users/avarsh/Documents/Programs/Humanoid/motionHandler/*.txt /Users/avarsh/Documents/Programs/Shadowbot\ Azure/assets/data/
+
 git add .
 git commit -m "$1"
 git push origin master

@@ -80,24 +80,25 @@
       <h2 class="centered">Data</h2>
       <hr>
         
-      <?php
-        $dir = "assets/data/"; // folder, e.g.: 'images/', same dir as script use a '.'
-        $myDirectory = opendir($dir);
-        while($entryName = readdir($myDirectory)) { $dirArray[] = $entryName; } // get files
-        closedir($myDirectory); // close directory
-
-        sort($dirArray); // sort 'em
-        $indexCount = count($dirArray); // count elements in array
-
-        // loop through the array of files and print them all
-        for($index=0; $index < $indexCount; $index++) {
-          if (substr("$dirArray[$index]", 0, 1) != ".") { // don't list hidden files
-            if (strstr("$dirArray[$index]", ".")==".txt") { // get image file types
-              print "n.push(escape('$dirArray[$index]')); ";
-            }
-          }
-        }
-      ?>
+      <?
+    // Define the full path to your folder from root
+    $path = "/assets/data";
+  
+    // Open the folder
+    $dir_handle = @opendir($path) or die("Unable to open $path");
+  
+    // Loop through the files
+    while ($file = readdir($dir_handle)) {
+  
+    if($file == "." || $file == ".." || $file == "index.php" )
+      continue;
+    
+    echo "<a href="$file">$file</a><br />";
+  
+    }
+    // Close
+    closedir($dir_handle);
+?>
 
     </div>
     <!-- row --> 

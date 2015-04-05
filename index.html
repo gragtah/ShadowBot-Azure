@@ -41,7 +41,6 @@
           <li><a href="#home" class="smoothScroll">Home</a></li>
           <li> <a href="#project" class="smoothScroll">Project</a></li>
           <li> <a href="#team" class="smoothScroll"> Team</a></li>
-          <li> <a href="#data" class="smoothScroll"> Data</a></li>
         </ul>
       </div>
       <!--/.nav-collapse --> 
@@ -72,40 +71,7 @@
   </div>
 </div>
 <!-- container -->
-
-<!-- ==== ABOUT ==== -->
-<div id="data" name="data">
-  <div class="container">
-    <div class="row white">
-      <h2 class="centered">Data</h2>
-      <hr>
-        
-      <?
-    // Define the full path to your folder from root
-    $path = "/assets/data";
-  
-    // Open the folder
-    $dir_handle = @opendir($path) or die("Unable to open $path");
-  
-    // Loop through the files
-    while ($file = readdir($dir_handle)) {
-  
-    if($file == "." || $file == ".." || $file == "index.php" )
-      continue;
-    
-    echo "<a href="$file">$file</a><br />";
-  
-    }
-    // Close
-    closedir($dir_handle);
-?>
-
-    </div>
-    <!-- row --> 
-  </div>
-</div>
-<!-- container --> 
-
+ 
 <!-- ==== TEAM MEMBERS ==== -->
 <div id="team" name="team">
   <div class="container">
